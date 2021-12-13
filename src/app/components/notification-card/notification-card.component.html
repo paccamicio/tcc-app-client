@@ -1,0 +1,75 @@
+<div class="box flex flex-col w-full bg-white rounded shadow-md px-4 py-4">
+  <div class="flex gap-2 items-center">
+    <div
+      class="
+        flex-shrink-0
+        rounded-full
+        bg-purple-700
+        w-12
+        h-12
+        place-self-center
+      "
+    >
+      <img class="object-cover rounded-full w-full h-full" [src]="notification.image">
+    </div>
+    <div class="place-self-start py-0.5 text-gray-700">
+      {{ notification.message }}
+    </div>
+  </div>
+  <div class="flex items-center gap-2 w-full mt-1">
+    <div
+      class="
+        my-auto
+        mx-auto
+        w-12
+        flex-shrink-0
+        text-center
+        font-semibold
+        text-sm text-gray-400
+      "
+    >
+      6h
+    </div>
+    <div
+      class="
+        grid grid-cols-2
+        gap-2
+        text-center
+        items-end
+        justify-between
+        w-full
+      "
+    >
+      <div
+        class="
+          btn
+          py-1.5
+          shadow
+          rounded-md
+          font-bold
+          text-white
+          bg-black
+          border border-black
+        "
+        (click)="(notificaiton.action)"
+      >
+        {{ notification.buttonText || "Confirmar" }}
+      </div>
+      <div
+        class="
+          btn
+          py-1.5
+          shadow
+          rounded-md
+          font-semibold
+          text-black
+          bg-white
+          border border-black
+        "
+        (click)="(notificaiton.cancelAction)"
+      >
+        Cancelar
+      </div>
+    </div>
+  </div>
+</div>

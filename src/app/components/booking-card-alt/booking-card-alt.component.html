@@ -1,0 +1,41 @@
+<div
+  class="
+    box
+    mt-4
+    mx-1
+    flex flex-shrink-0
+    w-full
+    h-32
+    bg-white
+    rounded
+    shadow-md
+    justify-between
+  "
+>
+  <div class="left-divide pl-3 flex flex-col items-start justify-between">
+    <h3 class="mt-4 text-black">{{ booking.title }}</h3>
+    <div class="text-gray-400 text-sm mb-3">
+      <div class="flex items-center">
+        <div class="mr-2">
+          <img class="mx-auto" src="../../../assets/icon/calendar.png" alt="" />
+        </div>
+        <h4 class="">{{ booking.date }}</h4>
+      </div>
+      <div class="flex items-center mt-1">
+        <div class="mr-2">
+          <img src="../../../assets/icon/relogio.png" alt="" />
+        </div>
+        <h4 class="">{{ booking.hour }}</h4>
+      </div>
+      <div class="mt-1">
+        <h4 class="">{{ booking.price | currency:'BRL':'symbol':undefined:'pt-BR' }}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="right-divide block w-32 h-full">
+    <img
+      class="h-full"
+      src="https://www.acmp.org.br/fmanager/acmp/noticias/imagem746_1.jpg"
+    />
+  </div>
+</div>

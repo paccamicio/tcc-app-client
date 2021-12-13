@@ -1,0 +1,8 @@
+/** Remove shadow */
+ion-header::after {
+    display: none;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,223 @@
+<ion-header>
+  <app-small-navbar></app-small-navbar>
+</ion-header>
+<ion-content>
+  <div class="flex flex-col h-full bg-white text-gray-700 px-6">
+    <h2 class="text-xl font-semibold mt-6">Dados de Acesso</h2>
+
+    <div class="input-block mt-3">
+      <h3 class="">Email</h3>
+      <div class="w-full mt-1">
+        <div class="relative">
+          <a
+            href="javascript:;"
+            class="
+              absolute
+              inset-y-0
+              right-0
+              flex
+              items-center
+              px-5
+              border-l border-gray-400
+            "
+            >Editar</a
+          >
+          <input
+            type="text"
+            class="
+              text-gray-400
+              px-4
+              py-2
+              w-full
+              h-12
+              font-semibold
+              bg-white
+              border border-gray-400
+              rounded-sm
+              text-sm
+              focus:outline-none
+            "
+            value="exemplo@cornercoworking.com"
+            disabled
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-block mt-3">
+      <h3 class="">Senha</h3>
+      <div class="w-full mt-1">
+        <div class="relative">
+          <a
+            href="javascript:;"
+            class="
+              absolute
+              inset-y-0
+              right-0
+              flex
+              items-center
+              px-5
+              border-l border-gray-400
+            "
+            >Editar</a
+          >
+          <input
+            type="password"
+            class="
+              text-gray-400
+              px-4
+              py-2
+              w-full
+              h-12
+              font-semibold
+              bg-white
+              border border-gray-400
+              rounded-sm
+              text-sm
+              focus:outline-none
+            "
+            value="******"
+            disabled
+          />
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-6">Dados de Pessoais</h2>
+
+    <div class="input-block mt-3">
+      <h3 class="">Nome Completo</h3>
+      <div class="w-full mt-1">
+        <div class="relative">
+          <div class="absolute inset-y-0 right-0 flex items-center px-5">
+            <i class="fas fa-user text-gray-400"></i>
+          </div>
+          <input
+            type="text"
+            class="
+              text-gray-700 text-sm
+              px-4
+              py-2
+              w-full
+              h-12
+              font-semibold
+              bg-white
+              border border-gray-400
+              rounded-sm
+              placeholder-gray-400
+              focus:outline-none
+            "
+            placeholder="Nome Completo"
+            value="Exemplo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-block mt-3">
+      <h3 class="">Data de nascimento</h3>
+      <div class="w-full mt-1">
+        <div class="relative">
+          <div class="absolute inset-y-0 right-0 flex items-center px-5">
+            <i class="fas fa-calendar-alt text-gray-400"></i>
+          </div>
+          <input
+            type="text"
+            class="
+              text-gray-700 text-sm
+              px-4
+              py-2
+              w-full
+              h-12
+              font-semibold
+              bg-white
+              border border-gray-400
+              rounded-sm
+              placeholder-gray-400
+              focus:outline-none
+            "
+            placeholder="Data de nascimento"
+            value="09/12/1992"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-block mt-3">
+      <h3 class="">Cidade</h3>
+      <div class="w-full mt-1">
+        <div class="relative">
+          <div class="absolute inset-y-0 right-0 flex items-center px-5">
+            <i class="fas fa-building text-gray-400"></i>
+          </div>
+          <input
+            type="text"
+            class="
+              text-gray-700 text-sm
+              px-4
+              py-2
+              w-full
+              h-12
+              font-semibold
+              bg-white
+              border border-gray-400
+              rounded-sm
+              placeholder-gray-400
+              focus:outline-none
+            "
+            placeholder="Cidade"
+            value="São Paulo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-block mt-3">
+      <h3 class="">Estado</h3>
+      <div class="w-full mt-1">
+        <ion-select
+          interface="popover"
+          placeholder="Selecione"
+          class="
+            text-gray-700 text-sm
+            px-4
+            py-2
+            w-full
+            h-12
+            font-semibold
+            bg-white
+            border border-gray-400
+            rounded-sm
+            placeholder-gray-400
+            focus:outline-none
+          "
+          value="sp"
+        >
+          <ion-select-option value="sp">São Paulo</ion-select-option>
+          <ion-select-option value="go">Goiás</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="p-2 px-5">
+    <a
+      class="
+        btn
+        w-full
+        bg-black
+        text-white
+        font-semibold
+        block
+        mt-3
+        shadow
+        py-2
+        text-center
+        rounded-lg
+      "
+      >Salvar</a
+    >
+  </div>
+</ion-footer>

@@ -1,0 +1,96 @@
+<ion-header>
+  <app-small-navbar></app-small-navbar>
+</ion-header>
+<ion-content>
+  <div class="min-h-screen w-full flex flex-col items-center justify-start bg-white p-5">
+    <!-- form -->
+    <form class="w-full flex-grow" [formGroup]="creditCard" (ngSubmit)="submitPayment()">
+
+      <div class="flex flex-1 flex-col justify-center align-middle">
+        <div class="w-full">
+          <img class="mt-10 h-20 w-full" src="../../../../assets/logo/short.svg"/>
+        </div>
+      </div>
+
+      <!-- owner name -->
+      <div class="mt-8 w-full mb-4">
+        <label>Titular do cartão</label>
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-4">
+            <i class="fas fa-user text-gray-400"></i>
+          </span>
+          <input
+            type="text"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="Ex: João da Silva.."
+            formControlName="name"
+          />
+        </div>
+      </div>
+
+      <div class="mt-8 w-full mb-4">
+        <label>Cartão</label>
+        <div id="card-element"
+          class="px-4 py-4 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none">
+        </div>
+      </div>
+
+      <button id="card-button"
+        type="button"
+        class="p-3 bg-black text-white rounded w-full"
+        [attr.data-secret]="intent"
+        (click)="checkout()">
+        Finalizar pagamento
+      </button>
+
+      <!-- cpf -->
+      <!-- <div class="mt-8 px-6 w-full mb-4">
+        <label>CPF do titular</label>
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-4">
+            <i class="fas fa-paperclip text-gray-400"></i>
+          </span>
+          <input
+            [brmasker]="{ mask: '000.000.000-00', len:14 }"
+            type="text"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="Ex: João da Silva.."
+            formControlName="cpf"
+          />
+        </div>
+      </div> -->
+
+      <!-- num -->
+      <!-- <div class="mt-8 px-6 w-full mb-4">
+        <label>Número do cartão</label>
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-4">
+            <i class="fas fa-credit-card text-gray-400"></i>
+          </span>
+          <input
+            id="card-element"
+            type="text"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="0000-0000-0000-0000"
+            [brmasker]="{ mask: '0000-0000-0000-0000', len:19 }"
+            formControlName="num"
+          />
+        </div>
+      </div> -->
+
+      <!-- last -->
+
+      <!-- submit -->
+      <!-- <div class="mt-5 px-6 w-full">
+        <button
+          class="p-3 bg-black text-white rounded w-full"
+          type="submit"
+          [ngClass]="{ 'bg-gray-600': !creditCard.valid }"
+        >
+          Confirmar pagamento
+          [disabled]="!creditCard.valid"
+        </button>
+      </div> -->
+    </form>
+  </div>
+</ion-content>

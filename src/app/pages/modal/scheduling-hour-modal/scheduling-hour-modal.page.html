@@ -1,0 +1,42 @@
+<ion-header>
+  <div class="py-6 rounded-b-xl flex justify-center items-center w-full h-20 bg-black">
+    <span class="text-white text-xl font-medium">
+      Escolha o horário do agendamento
+    </span>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="p-4 mb-6 w-full min-h-screen bg-white">
+    <div>
+      <div
+        class="flex flex-row"
+        *ngFor="let row of hours; let i = index;"
+      >
+        <div
+          class="p-2 m-1 flex-grow text-center border border-black rounded-lg"
+          [ngClass]="{ 'border-white bg-gray-200 text-gray-400': col.enabled === false, 'bg-black text-white': col.selected === true}"
+          (click)="selectHour(i, j, col)"
+          *ngFor="let col of row; let j = index;"
+        >
+          {{ col.value }}
+        </div>
+      </div>
+      <p class="mt-3 text-gray-700 text-center text-xs">
+        Basta clicar em um horário disponível.
+      </p>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="p-4 px-5">
+    <button
+      (click)="dismiss()"
+      [ngClass]="{ 'bg-gray-200 font-normal text-gray-400 border-white': userChoice === '' }"
+      [disabled]="userChoice === ''"
+      type="button"
+      class="btn w-full bg-black border border-gray-900 text-white block shadow py-2 text-center rounded-lg"
+    >
+      Escolher dia selecionado
+    </button>
+  </div>
+</ion-footer>

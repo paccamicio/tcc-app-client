@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-menu
+    #mainMenu
+    contentId="main-content"
+    type="overlay"
+  >
+    <div class="flex flex-col w-full min-h-screen max-h-screen bg-black">
+      <div class="flex-1 w-full h-full bg-black mt-16">
+        <div class="w-full h-full flex flex-col items-center justify-center justify-self-center">
+          <img
+            class="mb-4 rounded-full object-cover w-28 h-28 border-2 border-white"
+            src="../../../assets/image/user.jpeg"
+          >
+          <h1 class="font-medium text-xl text-white">Seja bem vindo,</h1>
+          <h1 class="font-bold text-2xl text-white">{{ user?.name ?? '' }}</h1>
+          <!-- <small class="font-thin text-sm text-white">Jogador profissional</small> -->
+        </div>
+      </div>
+      <div class="flex-1 bg-black">
+        <div (click)="goTo('booking-history')" class="flex justify-items-center items-center h-16 border-b-2 border-t-2 border-opacity-50 border-white">
+          <span class="ml-4 text-center text-white font-medium">Histórico</span>
+        </div>
+        <div (click)="goTo('support')" class="flex justify-items-center items-center h-16 border-white">
+          <span class="ml-4 text-center text-white font-medium">Ajuda e suporte</span>
+        </div>
+        <div (click)="goTo('privacy-settings')" class="flex justify-items-center items-center h-16 border-b-2 border-t-2 border-opacity-50 border-white">
+          <span class="ml-4 text-center text-white font-medium">Configurações e privacidade</span>
+        </div>
+      </div>
+      <div class="flex-1 bg-black w-full h-full">
+        <div class="flex flex-col flex-end w-full h-full">
+          <span
+            class="mt-auto ml-4 mb-4 text-white font-medium"
+            (click)="logout()"
+          >
+            Sair da conta
+          </span>
+        </div>
+      </div>
+    </div>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-menu>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

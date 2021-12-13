@@ -1,0 +1,94 @@
+<ion-header>
+  <div class="">
+    <app-big-navbar></app-big-navbar>
+    <div class="flex justify-center w-full">
+      <div
+        class="
+          bg-purple-500
+          border-white border-4
+          rounded-full
+          w-28
+          h-28
+          transform
+          -translate-y-1/2
+          absolute
+          shadow-menu
+        "
+      >
+        <img class="object-cover rounded-full w-full h-full" src="../../../assets/image/user.jpeg">
+      </div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="bg-transparent text-gray-700 px-2">
+    <div class="text-center mt-14">
+      <div class="text-2xl font-semibold">{{ user?.name ?? '' }}</div>
+      <div class="mt-2">{{ getAge(user?.birthdate) }} anos, São Paulo SP</div>
+      <div class="text-sm mt-2 mb-10">Sem rank.</div>
+    </div>
+    <div
+      class="
+        bg-black
+        text-white text-sm
+        py-2
+        text-center
+        font-semibold
+        rounded-md
+      "
+    >
+      Editar meu perfil
+    </div>
+    <div class="grid grid-cols-2 text-center pb-6">
+      <div class="">
+        <img class="mt-8 mx-auto" src="assets/icon/raquete.png" alt="Raquete">
+        <div class="uppercase w-36 mt-2 mx-auto text-xs">Partidas  <br> Completas</div>
+        <div>0</div>
+      </div>
+      <div class="">
+        <img class="mt-8 mx-auto" src="assets/icon/trofeu.png" alt="Troféu">
+        <div class="uppercase w-36 mt-2 mx-auto text-xs">Troféus <br> Ganhos</div>
+        <div>0</div>
+      </div>
+    </div>
+    <div class="mx-44 h-px bg-gray-400 transform rotate-90 -mt-24 mb-24"></div>
+    <h3 class="text-gray-700 font-medium">Lista de Amigos</h3>
+    <div class="overflow-x-scrol overflow-y-hidden mt-4">
+      <div class="flex gap-2 pb-3">
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-yellow-800"></div>
+          <div class="text-center text-xs font-semibold mt-1">Nanda</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-red-800"></div>
+          <div class="text-center text-xs font-semibold mt-1">Fábio</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-black"></div>
+          <div class="text-center text-xs font-semibold mt-1">Israell</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-blue-800"></div>
+          <div class="text-center text-xs font-semibold mt-1">Pablo</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-pink-800"></div>
+          <div class="text-center text-xs font-semibold mt-1">Carol</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-green-800"></div>
+          <div class="text-center text-xs font-semibold mt-1">Renan</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-yellow-500"></div>
+          <div class="text-center text-xs font-semibold mt-1">Léo</div>
+        </div>
+        <div>
+          <div class="picture rounded-full w-10 h-10 bg-red-300"></div>
+          <div class="text-center text-xs font-semibold mt-1">Yadi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,4 @@
+/** Remove shadow */
+ion-header::after {
+  display: none;
+}

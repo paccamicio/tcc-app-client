@@ -1,0 +1,49 @@
+<div class="bg-white bottom-0 w-full h-24 shadow-menu">
+  <div class="flex flex-row p-2 w-full h-full text-center justify-center align-middle items-center">
+    <div
+      class="flex-1 mx-auto w-3/12 p-1"
+      (click)="goTo('home')"
+    >
+      <img
+        class="inline opacity-20"
+        [ngClass]="{ 'opacity-100' : activatedRoute === 'home' }"
+        src="../../../assets/icon/home-black.svg"
+      >
+      <p
+        class="text-xs text-gray 300 font-bold"
+        [ngClass]="{ 'text-black' : activatedRoute === 'home' }"
+      >
+        Início
+      </p>
+    </div>
+    <div (click)="goTo('booking-gym-selector')" class="flex-1 mx-auto w-3/12 p-1">
+      <img
+        class="inline opacity-20"
+        [ngClass]="{ 'opacity-100' : activatedRoute === 'chat' }"
+        src="../../../assets/icon/message-black.svg"
+      >
+      <p
+        class="text-xs font-bold text-gray-300"
+        [ngClass]="{ 'text-black' : activatedRoute === 'chats' }"
+      >
+        Conversas
+      </p>
+    </div>
+    <div (click)="goTo('notifications')" class="flex-1 mx-auto w-3/12 p-1">
+      <img class="inline opacity-20" src="../../../assets/icon/bell-black.svg" alt="">
+      <p
+        class="text-xs font-bold text-gray-300"
+        [ngClass]="{ 'text-black' : activatedRoute === 'notifications' }"
+      >
+        Notificações
+      </p>
+    </div>
+    <div (click)="goTo('profile')" class="flex-1 mx-auto w-3/12 p-1">
+      <img class="inline opacity-20" src="../../../assets/icon/user-black.svg" alt="">
+      <p
+        class="text-xs font-bold text-gray-300"
+        [ngClass]="{ 'text-black' : activatedRoute === 'profile' }"
+      >Perfil</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<ion-header>
+  <div class="bg-white w-full h-full">
+    <app-small-navbar></app-small-navbar>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="min-h-screen bg-gray-100 text-gray-700 text-lg">
+    <h4 class="bg-gray-200 px-3 py-3 text-lg font-medium">Agendar Quadra {{ getScheduleType() }}</h4>
+    <div class="flex flex-col py-3">
+      <a (click)="navigateFoward('booking-court-details', params)" class="flex items-center justify-between">
+        <ion-icon class="p-3" name="tennisball-outline"></ion-icon>
+        <span class="flex-grow text-md">Reservar</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+    <h4 class="bg-gray-200 px-3 py-3 text-lg font-medium">Agendar Aula</h4>
+    <div class="flex flex-col py-3">
+      <a (click)="navigateFoward('class-individual-booking', params, 'one')" class="flex items-center justify-between">
+        <ion-icon class="p-3" name="person-outline"></ion-icon>
+        <span class="flex-grow text-md">Individual</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+    <hr class="text-white mx-4">
+    <div class="flex flex-col py-3">
+      <a (click)="navigateFoward('class-individual-booking', params, 'two')" class="flex items-center justify-between">
+        <ion-icon class="p-3" name="people-outline"></ion-icon>
+        <span class="flex-grow text-md">Dois jogadores</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+    <hr class="text-white mx-4">
+    <div class="flex flex-col py-3">
+      <a (click)="navigateFoward('class-individual-booking', params, 'four')" class="flex items-center justify-between">
+        <ion-icon class="p-3" name="people"></ion-icon>
+        <span class="flex-grow text-md">Grupo de quatro jogadores</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+  </div>
+</ion-content>

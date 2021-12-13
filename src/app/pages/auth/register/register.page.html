@@ -1,0 +1,116 @@
+<ion-content>
+  <app-default-wrapper>
+    <div class="w-full">
+      <app-semi-navbar></app-semi-navbar>
+    </div>
+
+    <brand-header name="Cadastro"></brand-header>
+
+    <form class="px-6 w-full" [formGroup]="user" (ngSubmit)="register()">
+      <!-- name -->
+      <div class="w-full mb-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-5">
+            <i class="fas fa-user text-gray-400"></i>
+          </span>
+          <input
+            type="text"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="Nome completo"
+            formControlName="name"
+          />
+        </div>
+      </div>
+      <!-- birthdate -->
+      <div class="mt-2 w-full mb-4">
+        <div class="relative">
+          <ion-item
+            class="datetime placeholder-gray-400 focus:outline-none"
+          >
+            <ion-label class="color-gray-400">Data de nascimento</ion-label>
+            <span
+              *ngIf="user.get('birthdate').invalid"
+              class="absolute inset-y-0 right-0 flex items-center pr-5"
+            >
+              <i class="fas fa-calendar text-gray-400"></i>
+            </span>
+            <ion-datetime
+              displayFormat="DD/MM/YYYY"
+              doneText="Pronto"
+              cancelText="Cancelar"
+              max="2004-12-01"
+              placeholder=""
+              formControlName="birthdate"
+            ></ion-datetime>
+          </ion-item>
+        </div>
+      </div>
+      <!-- cpf -->
+      <!-- <div class="mt-2 w-full mb-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-5">
+            <i class="fas fa-credit-card text-gray-400"></i>
+          </span>
+          <input
+            type="text"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="CPF"
+            maxlength="11"
+            formControlName="cpf"
+          />
+        </div>
+      </div> -->
+      <!-- email -->
+      <div class="mt-2 w-full mb-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-5">
+            <i class="fas fa-at text-gray-400"></i>
+          </span>
+          <input
+            type="email"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="E-mail"
+            formControlName="email"
+          />
+        </div>
+      </div>
+      <!-- password -->
+      <div class="mt-2 w-full mb-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 right-0 flex items-center pr-5">
+            <i class="fas fa-lock text-gray-400"></i>
+          </span>
+          <input
+            type="password"
+            class="px-4 py-2 w-full h-12 font-semibold bg-white border border-gray-400 focus:border-black rounded-sm text-sm placeholder-gray-400 focus:outline-none"
+            placeholder="Senha"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <!-- terms -->
+      <div class="mt-6 w-full">
+        <label class="flex flex-row mt-3">
+          <input type="checkbox"
+            class="form-checkbox h-5 w-5 text-black rounded-full"
+            [(ngModel)]="terms"
+            [ngModelOptions]="{standalone: true}"/>
+          <span
+            class="ml-2 text-sm text-gray-700"
+          >
+            Li e concordo com as
+            <b (click)="openTerms()">políticas</b> e
+            <b (click)="openTerms()">termos de uso.</b>
+          </span>
+        </label>
+      </div>
+      <!-- submit -->
+      <div class="mt-2 mb-4 w-full">
+        <button type="submit"
+          class="p-3 w-full rounded bg-black text-white">
+          <span class="text-white font-bold">CADASTRAR</span>
+        </button>
+      </div>
+    </form>
+  </app-default-wrapper>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "The Corner World",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

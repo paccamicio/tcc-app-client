@@ -1,0 +1,27 @@
+<ion-header>
+  <app-small-navbar></app-small-navbar>
+</ion-header>
+<ion-content>
+  <div class="min-h-screen bg-gray-100 text-gray-700 text-lg">
+    <h4 class="bg-gray-200 px-3 py-3 text-lg font-medium">Método de pagamento</h4>
+    <!-- credit card -->
+    <div class="flex flex-col py-3 bg-white border-b-2 border-gray-50" (click)="goTo('checkout-credit-card')">
+      <a class="flex items-center justify-between">
+        <i class="py-3 px-6 fas fa-credit-card"></i>
+        <span class="flex-grow text-md">Cartão de crédito</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+    <!-- pix -->
+    <div class="mt-2 flex flex-col py-3 bg-white border-b-2 border-gray-50" (click)="goTo('checkout-pix')">
+      <a class="flex items-center justify-between">
+        <i class="py-3 px-6 fas fa-money-check-alt"></i>
+        <span class="flex-grow text-md">PIX</span>
+        <ion-icon class="py-3 px-6" name="chevron-forward"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <!-- <div id="container">
+    <ion-button #stripeButton color="primary">Pagar com o stripe</ion-button>
+  </div> -->
+</ion-content>
